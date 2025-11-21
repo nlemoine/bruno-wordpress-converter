@@ -1,0 +1,73 @@
+{
+	"name": "@n5s/bruno-wordpress-converter",
+	"version": "0.0.0",
+	"description": "Convert WordPress REST API to Bruno collection format with beautiful interactive CLI",
+	"keywords": [
+		"bruno",
+		"usebruno",
+		"wordpress",
+		"rest-api",
+		"converter",
+		"wp-json",
+		"api-client",
+		"api",
+		"cli",
+		"tool",
+		"wordpress-api",
+		"bruno-collection"
+	],
+	"homepage": "https://github.com/nlemoine/bruno-wordpress-converter#readme",
+	"bugs": {
+		"url": "https://github.com/nlemoine/bruno-wordpress-converter/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nlemoine/bruno-wordpress-converter.git"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Nicolas Lemoine",
+		"email": "nico@n5s.dev",
+		"url": "https://github.com/nlemoine"
+	},
+	"type": "module",
+	"exports": {
+		".": "./src/index.js",
+		"./package.json": "./package.json"
+	},
+	"main": "src/index.js",
+	"bin": {
+		"wp-to-bruno": "src/cli.js"
+	},
+	"files": [
+		"src/**/*",
+		"README.md",
+		"LICENSE",
+		"CHANGELOG.md"
+	],
+	"scripts": {
+		"format": "biome format --write",
+		"lint": "biome lint",
+		"normalize": "sort-package-json",
+		"prepublishOnly": "npm run lint",
+		"start": "node src/cli.js"
+	},
+	"dependencies": {
+		"@clack/prompts": "^0.11.0",
+		"@usebruno/converters": "^0.14.0",
+		"@usebruno/lang": "^0.31.0",
+		"@usebruno/schema": "^0.21.0",
+		"https-proxy-agent": "^7.0.6",
+		"lodash": "^4.17.21",
+		"nanoid": "^3.3.8",
+		"node-fetch": "^3.3.2",
+		"yargs": "^18.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.5",
+		"sort-package-json": "^3.4.0"
+	},
+	"engines": {
+		"node": ">=20.0.0"
+	}
+}
