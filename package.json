@@ -1,6 +1,6 @@
 {
 	"name": "@n5s/bruno-wordpress-converter",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Convert WordPress REST API to Bruno collection format with beautiful interactive CLI",
 	"keywords": [
 		"bruno",
